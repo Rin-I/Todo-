@@ -23,10 +23,16 @@
         const $doneButton = document.querySelectorAll("button");
         let TaskIndex = 0;
         let TaskLen = document.querySelectorAll("button.OK").length;
-        while (TaskIndex < TaskLen) {
-            $doneButton[TaskIndex].addEventListener("click", (e)=> TaskDone(e));            
-            TaskIndex++;
-        }
+
+        [$doneButton].forEach((button)=>{
+            button.addEventListener("click", ()=> {
+                button.closest("li").classList.add("done");
+            });            
+        })
+        // while (TaskIndex < TaskLen) {
+        //     $doneButton[TaskIndex].addEventListener("click", (e)=> TaskDone(e));            
+        //     TaskIndex++;
+        // }
         
         const TaskDone = (e) =>{
             e.preventDefault;
@@ -34,51 +40,6 @@
             $li.classList.add("done");
         }
         
-        let $SubT = document.getElementsByTagName("li");
-        console.log($SubT.length);
-        $SubT[0].addEventListener("click", (e) => {
-            e.preventDefault;
-            if (e.target.nextElementSibling.style.display === "none") {
-                e.target.nextElementSibling.style.display = "block";
-            }else{
-            e.target.nextElementSibling.style.display = "none";
-            };
-        });
-        $SubT[1].addEventListener("click", (e) => {
-            e.preventDefault;
-            if (e.target.nextElementSibling.style.display === "none") {
-                e.target.nextElementSibling.style.display = "block";
-            }else{
-            e.target.nextElementSibling.style.display = "none";
-            };
-        });
-        $SubT[2].addEventListener("click", () => {
-            if ($SubT[2].nextElementSibling.style.display === "none") {
-                $SubT[2].nextElementSibling.style.display = "block";
-            }else{
-            $SubT[2].nextElementSibling.style.display = "none";
-            };
-        });        
-        // let $SubT = document.getElementsByTagName("li");
-        // let $SubTlen = $SubT.length;
-        // let SubTIndex = 0;
-        // while (SubTIndex < $SubTlen) {
-        //     $SubT[SubTIndex].addEventListener("click", ()=> {
-        //         if ($SubT[SubTIndex].nextElementSibling.style.display === "none") {
-        //             $SubT[SubTIndex].nextElementSibling.style.display = "block";
-        //         }else{
-        //         $SubT[SubTIndex].nextElementSibling.style.display = "none";
-        //         }
-        //     });
-        //     SubTIndex++;
-        // }
-        // $SubT[0].addEventListener("click", ()=> {
-        //     if ($SubT[0].nextElementSibling.style.display = "none") {
-        //         $SubT[0].nextElementSibling.style.display = "block";
-        //     }else{
-        //     $SubT[0].nextElementSibling.style.display = "none";
-        //     }
-        // })
     });
     // let $SubT = document.getElementsByTagName("li");
 
