@@ -1,5 +1,4 @@
 (() => {
-    console.log("aaa");
     const $elm = document.getElementById("js-accordion");
 
     //新しいタスクとボタンで追加
@@ -14,20 +13,9 @@
         $elm.appendChild(aAdd);
         const divAdd = document.createElement("div.accordion-contents");
         divAdd.classList.add("accordion-contents")
-        divAdd.innerText = "うんこ"
+        divAdd.innerText = "aaaa"
         $elm.appendChild(aAdd);
         $elm.appendChild(divAdd);
-
-        // Accordion追加
-        // const $NewTask = document.getElementById("New");
-        // const divAdd = document.createElement("div");
-        // divAdd.innerText = $NewTask.value;
-        // divAdd.classList.add("accordion-contents")
-        // $elm.appendChild(aAdd);
-        // const divAdd = document.createElement("div.accordion-contents");
-        // $elm.appendChild(aAdd);
-        // $elm.appendChild(divAdd);
-
     })
 })();
 
@@ -41,9 +29,9 @@ const $AddButton = document.querySelector("button");
         let AccorLen = $Qin.length;
         let AccorIndex = 0;
         while (AccorIndex < AccorLen) {
-            console.log(AccorLen);
+            console.log(AccorIndex);
             $Qin[AccorIndex].addEventListener("click",(e)=>ChangeBlock(e));
-            AccorIndex++
+            AccorIndex++;
         }
     });
 
