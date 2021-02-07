@@ -27,6 +27,16 @@
         Button.addEventListener("click", ()=> {
             Button.closest("li").classList.add("done");
         });            
+        // while (TaskIndex < TaskLen) {	
+        //     $doneButton[TaskIndex].addEventListener("click", (e)=> TaskDone(e));            	
+        //     TaskIndex++;	
+        // }	
+
+        const TaskDone = (e) =>{	
+            e.preventDefault;	
+            const $li = e.target.closest("li");	
+            $li.classList.add("done");	
+        }
         
         const $SubT = document.getElementsByTagName("li");
         (function(n) {
@@ -39,4 +49,20 @@
             })
         })($SubT.length - 1)
     });
+    // let $SubT = document.getElementsByTagName("li");	
+
+    // $SubT[0].addEventListener("click", () => {	
+    //     if ($SubT[0].nextElementSibling.style.display === "none") {	
+    //         $SubT[0].nextElementSibling.style.display = "block";	
+    //     }else{	
+    //     $SubT[0].nextElementSibling.style.display = "none";	
+    //     };	
+    // });	
+    // $SubT[1].addEventListener("click", () => {	
+    //     if ($SubT[1].nextElementSibling.style.display === "none") {	
+    //         $SubT[1].nextElementSibling.style.display = "block";	
+    //     }else{	
+    //     $SubT[1].nextElementSibling.style.display = "none";	
+    //     };	
+    // }); 
 })();
